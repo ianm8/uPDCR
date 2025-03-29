@@ -21,7 +21,9 @@
  * https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
  *
  * Version 0.9 2025-03-01
- * Version 1.0 2025-03-26
+ * Version 1.0 2025-03-26 fix random mode change
+ * Version 1.1 2025-03-26 improve band change muting
+ * Version 1.2 2025-03-29 tweak to S-meter parameters
  *
  * Build:
  *  Board: Seeed XIAO RP2350
@@ -131,10 +133,9 @@ volatile static float adc_value_q = 0;
 volatile static bool adc_value_ready = false;
 volatile static bool setup_complete = false;
 
-
 void setup()
 {
-  // LED as active low
+  // LED is active low
   pinMode(LED_BUILTIN,OUTPUT);
   digitalWrite(LED_BUILTIN,HIGH);
 #if defined DEBUG_LED && DEBUG_LED==1
@@ -295,7 +296,6 @@ void __not_in_flash_func(loop)(void)
   {
     adc_value_ready = false;
     int32_t rx_value = 0;
-////
     switch (radio.mode)
     {
       case MODE_LSB: rx_value = (int32_t)DSP::process_ssb(adc_value_i,adc_value_q); break;
@@ -383,6 +383,7 @@ void __not_in_flash_func(loop1)(void)
         radio.band_frequency[old_band] = radio.frequency;
         radio.frequency = radio.band_frequency[radio.band];
         state = STATE_WAIT_RELEASE;
+        DSP::mute();
         break;
       }
       switch (rotary)

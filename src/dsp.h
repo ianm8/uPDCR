@@ -77,11 +77,8 @@ namespace DSP
     // assume S9 = 86 in 14 bits (35mv PP)
     volatile static uint32_t s = 0;
     volatile static uint32_t agc_update = 0;
-    //static const float S0_sig = 30.0f; // not bad
-    //static const float S0_sig = 5.0f; // too low, LED on all the time with antenna noise
-    //static const float S0_sig = 10.0f; // too low, LED on all the time with antenna noise
-    static const float S0_sig = 20.0f;
-    static const float S9_sig = 86.0f;
+    static const float S0_sig = 30.0f;
+    static const float S9_sig = 120.0f;
     static const uint32_t sig_min = (uint32_t)(log10f(S0_sig) * 1024.0f);
     static const uint32_t sig_max = (uint32_t)(log10f(S9_sig) * 1024.0f);
     static const uint32_t led_min = 0ul;
