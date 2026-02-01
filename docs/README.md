@@ -49,20 +49,20 @@ megahertz
 4. Open the recording in Audactiy
 
 5. Use the export function (File -> Export Audio) with the following options:
-  Format: Other uncompressed files
-  Channels: Mono
-  Sample Rate: 31250
-  Header: RAW
-  Encoding: Unsigned 8-bit PCM
-  Export Range: Entire Project
+* Format: Other uncompressed files
+* Channels: Mono
+* Sample Rate: 31250
+* Header: RAW
+* Encoding: Unsigned 8-bit PCM
+* Export Range: Entire Project
 
 6. Now use an online tool to convert to a C file structure. I used https://notisrac.github.io/FileToCArray/ with the following options:
-  Code format: Hex (0x00)
-  static: (checked)
-  const: (checked)
-  unsigned: (not checked)
-  Data type: uint8_t
-  PROGMEM: (not checked)
+* Code format: Hex (0x00)
+* static: (checked)
+* const: (checked)
+* unsigned: (not checked)
+* Data type: uint8_t
+* PROGMEM: (not checked)
 
 6. Copy the code into the vfadata.h file
 
