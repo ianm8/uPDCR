@@ -1,4 +1,4 @@
-# In this dicectory
+# In this directory
 Schematic and pics of the uPDCR.
 
 # How to update the annouce audio
