@@ -67,7 +67,7 @@ megahertz
 
 7. Using Audacity, update the start and end values in the vfa.h file using the following formulae:
 
-start = start-time * 31250
-end = end-time * 31250
+* start = start-time * 31250
+* end = end-time * 31250
 
 where start-time and end-time are in seconds, eg, if the word "fifteen" starts at 17.0 and ends at 18.0 then "start" will be at 17.0 * 31250 = 531250 and "end" will be at 18.0 * 31250 = 562500
