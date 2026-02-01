@@ -1,11 +1,11 @@
-#In this dicectory
+# In this dicectory
 Schematic and pics of the uPDCR.
 
-#How to update the annouce audio
+# How to update the annouce audio
 
 1. set up Audacity to record from desktop audio: https://support.audacityteam.org/basics/recording-desktop-audio (if there is an export function then you don't need to do this just export the audio and open in Audacity)
 2. use an online text-to-speech with the following text (I used https://www.naturalreaders.com/online/):
-
+```
 0
 
 1
@@ -41,7 +41,7 @@ Schematic and pics of the uPDCR.
 point
 
 megahertz
-
+```
 
 3. Export or record the audio in Audacity
 
