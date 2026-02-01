@@ -2,6 +2,7 @@
 Schematic and pics of the uPDCR.
 
 # How to update the annouce audio
+I used Audacity to record and export the announce audio. In general, we need a single file with the numbers from 0 to fifteen and the words "point" and "megahertz". The file should then be exported as raw, 8 bit, unsigned, and at a sample rate of 31250 Hz. Total file size should not exceed 2 MB.
 
 1. set up Audacity to record from desktop audio: https://support.audacityteam.org/basics/recording-desktop-audio (if there is an export function then you don't need to do this just export the audio and open in Audacity)
 2. use an online text-to-speech with the following text (I used https://www.naturalreaders.com/online/):
